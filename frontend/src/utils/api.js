@@ -18,7 +18,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   timeout: 10000, // fail requests that take longer than 10 seconds
 });
 
